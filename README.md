@@ -30,6 +30,8 @@ The above test program is _unlikely_ to have collisions, but it's
 certainly possible for various hashing functions. With DJB2 (32 bit) and
 FNV-1 (64 bit) hashing functions, there are no collisions.
 
+DONE
+
 ## Day 2
 
 Task: Implement linked-list chaining for collision resolution.
@@ -47,6 +49,7 @@ python test_hashtable.py
 Task: Implement load factor measurements and automatic hashtable size
 doubling.
 
+DONE
 1. Compute and maintain load factor.
 
 2. When load factor increases above `0.7`, automatically rehash the
