@@ -9,26 +9,20 @@ def slowfun_too_slow(x, y):
 
     return v
 
+cache = {}
+
 def slowfun(x, y):
     """
     Rewrite slowfun_too_slow() in here so that the program produces the same
     output, but completes quickly instead of taking ages to run.
     """
     # Your code here
-    cache = {}
-​
-    def slowfun_too_slow(x, y):
-	    if n <= 1:
-		    return n
-​
-	    if n not in cache:
-		    cache[n] = fib(n-1) + fib(n-2)
-​
-	        return cache[n]
-​
-    for i in range(1000000):
-	    print(f"{i}: {fib(i)}")
-
+    key = (x, y)
+    if n in cache:
+	    return n
+    if n not in cache:
+	    cache[key] = slowfun_too_slow(key) 
+    return cache[key]
 
 
 # Do not modify below this line!
