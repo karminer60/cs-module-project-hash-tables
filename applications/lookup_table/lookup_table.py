@@ -1,3 +1,5 @@
+import random
+import math
 # Your code here
 
 
@@ -18,10 +20,10 @@ def slowfun(x, y):
     """
     # Your code here
     key = (x, y)
-    if n in cache:
-	    return n
-    if n not in cache:
-	    cache[key] = slowfun_too_slow(key) 
+    if key in cache:
+	    return cache[key]
+    if key not in cache:
+	    cache[key] = slowfun_too_slow(x,y) 
     return cache[key]
 
 
