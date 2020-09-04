@@ -1,9 +1,8 @@
 # Your code here
 
-
+cache = {}
 def expensive_seq(x, y, z):
     # Your code here
-    exps(x, y, z) =
     if x <= 0: 
         return y + z
     if (x, y, z) in cache: 
